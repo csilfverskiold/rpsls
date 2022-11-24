@@ -1,3 +1,21 @@
+
+/**
+ * "Declare constants for DOM elements and
+ * possible choices"
+ * ^ -- QUOTED FROM CI PP2 SCOPE- REWORD THIS! -- ^
+ */
+const playerChoiceDisplay = document.getElementById('player-choice')
+const computerChoiceDisplay = document.getElementById('computer-choice')
+const resultDisplay = document.getElementById('result')
+const buttonChoices = document.querySelectorAll('button')
+let userChoice
+
+buttonChoices.forEach(buttonChoice => buttonChoice.addEventListener('click', (e) => {
+userChoice = e.target.id 
+playerChoiceDisplay.innerHTML = userChoice
+})) // The block of code above was slightly reworded for my project and taken from: https://www.youtube.com/watch?v=RwFeg0cEZvQ 
+
+
 /**
  * This function displays the players choice in the game
  */
