@@ -1,4 +1,3 @@
-
 /**
  * "Declare constants for DOM elements and
  * possible choices"
@@ -9,11 +8,13 @@ const computerChoiceDisplay = document.getElementById('computer-choice')
 const resultDisplay = document.getElementById('result')
 const buttonChoices = document.querySelectorAll('button')
 let computerChoice
+let result
 
 buttonChoices.forEach(buttonChoice => buttonChoice.addEventListener('click', (e) => {
-playerChoice = e.target.id 
-playerChoiceDisplay.innerHTML = playerChoice
-generateComputerChoice()
+    playerChoice = e.target.id
+    playerChoiceDisplay.innerHTML = playerChoice
+    generateComputerChoice()
+    showResult()
 
 })) // The block of code above was slightly reworded for my project and taken from: https://www.youtube.com/watch?v=RwFeg0cEZvQ 
 
@@ -41,22 +42,55 @@ function generateComputerChoice() {
 }
 
 /**
+ * This function displays if the player or computer won
+ */
+function showResult() {
+
+    if (playerChoice == computerChoice) {
+        result = "Draw!"
+    }
+    if (playerChoice == "rock" && computerChoice == "paper") {
+        result = "Computer wins!"
+    }
+    if (playerChoice == "rock" && computerChoice == "scissors" ) {
+        result = "Player wins!"
+    }
+    if (playerChoice == "paper" && computerChoice == "rock") {
+        result = "Player wins!"
+    }
+    if (playerChoice == "paper" && computerChoice == "scissors") {
+        result = "Computer wins!"
+    }
+    if (playerChoice == "scissors" && computerChoice == "rock") {
+        result = "Computer wins!"
+    }
+    if (playerChoice == "scissors" && computerChoice == "paper") {
+        result = "Player wins!"
+    }
+
+    resultDisplay.innerHTML = result
+
+}
+
+
+
+/**
  * This function displays the players current winning score
  */
-function incrementWin() {
+function incrementPlayerWin() {
 
 }
 
 /**
- * This function displays the players current losing score
+ * This function displays the computers current winning score
  */
-function incrementLoss() {
+function incrementComputerWin() {
 
-} 
+}
 
 /**
  * This function displays the amount of rounds played 
  */
 function incrementRounds() {
-    
+
 }
