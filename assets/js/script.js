@@ -72,8 +72,6 @@ function showResult() {
 
 }
 
-
-
 /**
  * This function displays the players current winning score
  */
