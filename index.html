@@ -6,26 +6,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Rock, Paper, Scissors Game</title>
+    <script src="https://kit.fontawesome.com/706dcb3fb0.js" crossorigin="anonymous"></script>
+    <title>Rock, Paper, Scissors, Lizard, Spock Game</title>
 </head>
 
 <body>
+    <header>
+        <h1>Rock, Paper, Scissors, Lizard, Spock</h1>
+    </header>
     <h2>Player: <span id="player-choice"></span></h2>
     <h2>Computer: <span id="computer-choice"></span></h2>
     <h2>Result: <span id="result"></span></h2>
 
-    <button id="rock" data-choice="Rock">Rock</button>
-    <button id="paper" data-choice="Paper">Paper</button>
-    <button id="scissors" data-choice="Scissors">Scissors</button>
-    <button id="lizard" data-choice="Lizard">Lizard</button>
-    <button id="spock" data-choice="Spock">Spock</button>
+    <section>
+        <div class="button-area">
+            <button id="rock" data-choice="Rock">Rock</button>
+            <button id="paper" data-choice="Paper">Paper</button>
+            <button id="scissors" data-choice="Scissors">Scissors</button>
+            <button id="lizard" data-choice="Lizard">Lizard</button>
+            <button id="spock" data-choice="Spock">Spock</button>
+        </div>
+    </section>
 
 
     <section>
         <div class="score-area">
             <h3 class="score">Player Score: <span id="player-score">0</span></h3>
             <h3 class="score">Computer Score: <span id="comp-score">0</span></h3>
-            <h3 class="rounds">Rounds: <span id="rounds-played"></span></h3>
+            <h3 class="rounds">Rounds: <span id="rounds-played">0</span></h3>
         </div>
     </section>
 
