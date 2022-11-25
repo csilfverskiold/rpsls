@@ -9,11 +9,14 @@ const resultDisplay = document.getElementById("result")
 const playerScoreDisplay = document.getElementById("player-score")
 const compScoreDisplay = document.getElementById("comp-score")
 const buttonChoices = document.querySelectorAll("button")
+const roundsDisplay = document.getElementById("rounds-played")
+let rounds = 0;
 let playerChoice
 let computerChoice
 let result
 let playerScore = 0;
 let compScore = 0;
+
 
 for (let button of buttonChoices) {
     button.addEventListener("click", function() {
@@ -21,8 +24,6 @@ for (let button of buttonChoices) {
         playerChoiceDisplay.innerHTML = playerChoice
         generateComputerChoice()
         showResult()
-        incrementPlayerWin()
-        incrementComputerWin()
     })
     
 }
@@ -51,77 +52,43 @@ function showResult() {
     }
     if (playerChoice == "Rock" && computerChoice == "Paper") {
         result = "Computer wins!"
+        compScore++;
     }
     if (playerChoice == "Rock" && computerChoice == "Scissors" ) {
         result = "Player wins!"
+        playerScore++;
     }
     if (playerChoice == "Paper" && computerChoice == "Rock") {
         result = "Player wins!"
+        playerScore++;
     }
     if (playerChoice == "Paper" && computerChoice == "Scissors") {
         result = "Computer wins!"
+        compScore++;
     }
     if (playerChoice == "Scissors" && computerChoice == "Rock") {
         result = "Computer wins!"
+        compScore++;
     }
     if (playerChoice == "Scissors" && computerChoice == "Paper") {
         result = "Player wins!"
+        playerScore++;
     }
+    if (result != "Draw!"){
+        rounds++;
+    }
+
+    if (playerScore == 3 || compScore == 3) {
+        rounds = 0;
+        playerScore = 0;
+        compScore = 0;
+    }
+
+
 
     resultDisplay.innerHTML = result
-
-
-}
-
-// The block of code above was slightly reworded for my project and taken from: https://www.youtube.com/watch?v=RwFeg0cEZvQ 
-
-/**
- * This function displays the players current winning score
- */
-function incrementPlayerWin() {
-
-    if (playerChoice == "Rock" && computerChoice == "Scissors" ) {
-        result = "Player wins!"
-        playerScore++;
-    }
-    if (playerChoice == "Paper" && computerChoice == "Rock") {
-        result = "Player wins!"
-        playerScore++;
-    }
-    if (playerChoice == "Scissors" && computerChoice == "Paper") {
-        result = "Player wins!"
-        playerScore++;
-    }
-
     playerScoreDisplay.innerHTML = playerScore
-
-}
-
-/**
- * This function displays the computers current winning score
- */
-/*function incrementComputerWin() {
-
-    if (playerChoice == "Rock" && computerChoice == "Paper") {
-        compScore++;
-    } 
-
-    if (playerChoice == "Paper" && computerChoice == "Scissors") {
-        result = "Computer wins!"
-        compScore++;
-    }
-    if (playerChoice == "Scissors" && computerChoice == "Rock") {
-        result = "Computer wins!"
-        compScore++;
-    }
-
-    compScoreDisplay.innerHTML = compScore++;
-
-}*/
-
-/**
- * This function displays the amount of rounds played 
- */
-function incrementRounds() {
+    compScoreDisplay.innerHTML = compScore
+    roundsDisplay.innerHTML = rounds
 
 }
