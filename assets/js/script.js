@@ -7,17 +7,18 @@ const playerChoiceDisplay = document.getElementById('player-choice')
 const computerChoiceDisplay = document.getElementById('computer-choice')
 const resultDisplay = document.getElementById('result')
 const buttonChoices = document.querySelectorAll('button')
+let playerChoice
 let computerChoice
 let result
 
-buttonChoices.forEach(buttonChoice => buttonChoice.addEventListener('click', (e) => {
-    playerChoice = e.target.id
-    playerChoiceDisplay.innerHTML = playerChoice
-    generateComputerChoice()
-    showResult()
-
-})) // The block of code above was slightly reworded for my project and taken from: https://www.youtube.com/watch?v=RwFeg0cEZvQ 
-
+for (let button of buttonChoices) {
+    button.addEventListener("click", function() {
+        let playerChoice = this.getAttribute("data-choice");
+        playerChoiceDisplay.innerHTML = playerChoice
+        generateComputerChoice()
+        showResult()
+    })
+}
 
 /**
  * This function randomly generates and displays the
@@ -28,18 +29,20 @@ function generateComputerChoice() {
     let generateNumber = Math.floor(Math.random() * 3) + 1;
 
     if (generateNumber == 1) {
-        computerChoice = "rock"
+        computerChoice = "Rock"
     }
     if (generateNumber == 2) {
-        computerChoice = "paper"
+        computerChoice = "Paper"
     }
     if (generateNumber == 3) {
-        computerChoice = "scissors"
+        computerChoice = "Scissors"
     }
 
     computerChoiceDisplay.innerHTML = computerChoice
 
 }
+
+// The block of code above was slightly reworded for my project and taken from: https://www.youtube.com/watch?v=RwFeg0cEZvQ 
 
 /**
  * This function displays if the player or computer won
@@ -49,28 +52,30 @@ function showResult() {
     if (playerChoice == computerChoice) {
         result = "Draw!"
     }
-    if (playerChoice == "rock" && computerChoice == "paper") {
+    if (playerChoice == "Rock" && computerChoice == "Paper") {
         result = "Computer wins!"
     }
-    if (playerChoice == "rock" && computerChoice == "scissors" ) {
+    if (playerChoice == "Rock" && computerChoice == "Scissors" ) {
         result = "Player wins!"
     }
-    if (playerChoice == "paper" && computerChoice == "rock") {
+    if (playerChoice == "Paper" && computerChoice == "Rock") {
         result = "Player wins!"
     }
-    if (playerChoice == "paper" && computerChoice == "scissors") {
+    if (playerChoice == "Paper" && computerChoice == "Scissors") {
         result = "Computer wins!"
     }
-    if (playerChoice == "scissors" && computerChoice == "rock") {
+    if (playerChoice == "Scissors" && computerChoice == "Rock") {
         result = "Computer wins!"
     }
-    if (playerChoice == "scissors" && computerChoice == "paper") {
+    if (playerChoice == "Scissors" && computerChoice == "Paper") {
         result = "Player wins!"
     }
 
     resultDisplay.innerHTML = result
 
 }
+
+// The block of code above was slightly reworded for my project and taken from: https://www.youtube.com/watch?v=RwFeg0cEZvQ 
 
 /**
  * This function displays the players current winning score
