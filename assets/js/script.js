@@ -33,7 +33,7 @@ for (let button of buttonChoices) {
  */
 function generateComputerChoice() {
 
-    let generateNumber = Math.floor(Math.random() * 3) + 1;
+    let generateNumber = Math.floor(Math.random() * 5) + 1;
 
     if (generateNumber == 1) {
         computerChoice = "Rock"
@@ -43,6 +43,12 @@ function generateComputerChoice() {
     }
     if (generateNumber == 3) {
         computerChoice = "Scissors"
+    }
+    if (generateNumber == 4) {
+        computerChoice = "Lizard"
+    }
+    if (generateNumber == 5) {
+        computerChoice = "Spock"
     }
 
     computerChoiceDisplay.innerHTML = computerChoice
