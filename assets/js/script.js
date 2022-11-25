@@ -33,29 +33,13 @@ for (let button of buttonChoices) {
  */
 function generateComputerChoice() {
 
-    let generateNumber = Math.floor(Math.random() * 5) + 1;
-
-    if (generateNumber == 1) {
-        computerChoice = "Rock"
-    }
-    if (generateNumber == 2) {
-        computerChoice = "Paper"
-    }
-    if (generateNumber == 3) {
-        computerChoice = "Scissors"
-    }
-    if (generateNumber == 4) {
-        computerChoice = "Lizard"
-    }
-    if (generateNumber == 5) {
-        computerChoice = "Spock"
-    }
+    let generateNumber = Math.floor(Math.random() * 5);
+    const choices = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
+    computerChoice = choices[generateNumber]
 
     computerChoiceDisplay.innerHTML = computerChoice
 
 }
-
-// The block of code above was slightly reworded for my project and taken from: https://www.youtube.com/watch?v=RwFeg0cEZvQ 
 
 /**
  * This function displays if the player or computer won
