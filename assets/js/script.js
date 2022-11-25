@@ -3,21 +3,28 @@
  * possible choices"
  * ^ -- QUOTED FROM CI PP2 SCOPE- REWORD THIS! -- ^
  */
-const playerChoiceDisplay = document.getElementById('player-choice')
-const computerChoiceDisplay = document.getElementById('computer-choice')
-const resultDisplay = document.getElementById('result')
-const buttonChoices = document.querySelectorAll('button')
+const playerChoiceDisplay = document.getElementById("player-choice")
+const computerChoiceDisplay = document.getElementById("computer-choice")
+const resultDisplay = document.getElementById("result")
+const playerScoreDisplay = document.getElementById("player-score")
+const compScoreDisplay = document.getElementById("comp-score")
+const buttonChoices = document.querySelectorAll("button")
 let playerChoice
 let computerChoice
 let result
+let playerScore = 0;
+let compScore = 0;
 
 for (let button of buttonChoices) {
     button.addEventListener("click", function() {
-        let playerChoice = this.getAttribute("data-choice");
+        playerChoice = this.getAttribute("data-choice");
         playerChoiceDisplay.innerHTML = playerChoice
         generateComputerChoice()
         showResult()
+        incrementPlayerWin()
+        incrementComputerWin()
     })
+    
 }
 
 /**
@@ -73,6 +80,7 @@ function showResult() {
 
     resultDisplay.innerHTML = result
 
+
 }
 
 // The block of code above was slightly reworded for my project and taken from: https://www.youtube.com/watch?v=RwFeg0cEZvQ 
@@ -82,14 +90,44 @@ function showResult() {
  */
 function incrementPlayerWin() {
 
+    if (playerChoice == "Rock" && computerChoice == "Scissors" ) {
+        result = "Player wins!"
+        playerScore++;
+    }
+    if (playerChoice == "Paper" && computerChoice == "Rock") {
+        result = "Player wins!"
+        playerScore++;
+    }
+    if (playerChoice == "Scissors" && computerChoice == "Paper") {
+        result = "Player wins!"
+        playerScore++;
+    }
+
+    playerScoreDisplay.innerHTML = playerScore
+
 }
 
 /**
  * This function displays the computers current winning score
  */
-function incrementComputerWin() {
+/*function incrementComputerWin() {
 
-}
+    if (playerChoice == "Rock" && computerChoice == "Paper") {
+        compScore++;
+    } 
+
+    if (playerChoice == "Paper" && computerChoice == "Scissors") {
+        result = "Computer wins!"
+        compScore++;
+    }
+    if (playerChoice == "Scissors" && computerChoice == "Rock") {
+        result = "Computer wins!"
+        compScore++;
+    }
+
+    compScoreDisplay.innerHTML = compScore++;
+
+}*/
 
 /**
  * This function displays the amount of rounds played 
