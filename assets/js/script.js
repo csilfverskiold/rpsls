@@ -1,7 +1,5 @@
 /**
- * "Declare constants for DOM elements and
- * possible choices"
- * ^ -- QUOTED FROM CI PP2 SCOPE- REWORD THIS! -- ^
+ * Declare variables for DOM elements
  */
 const playerChoiceDisplay = document.getElementById("player-choice")
 const computerChoiceDisplay = document.getElementById("computer-choice")
@@ -10,12 +8,12 @@ const playerScoreDisplay = document.getElementById("player-score")
 const compScoreDisplay = document.getElementById("comp-score")
 const buttonChoices = document.querySelectorAll("button")
 const roundsDisplay = document.getElementById("rounds-played")
-let rounds = 0;
 let playerChoice
 let computerChoice
 let result
 let playerScore = 0;
 let compScore = 0;
+let rounds = 0;
 
 
 for (let button of buttonChoices) {
@@ -54,9 +52,17 @@ function showResult() {
         result = "Computer wins!"
         compScore++;
     }
-    if (playerChoice == "Rock" && computerChoice == "Scissors" ) {
+    if (playerChoice == "Rock" && computerChoice == "Scissors") {
         result = "Player wins!"
         playerScore++;
+    }
+    if (playerChoice == "Rock" && computerChoice == "Lizard") {
+        result = "Player wins!"
+        playerScore++;
+    }
+    if (playerChoice == "Rock" && computerChoice == "Spock") {
+        result = "Computer wins!"
+        compScore++;
     }
     if (playerChoice == "Paper" && computerChoice == "Rock") {
         result = "Player wins!"
@@ -66,6 +72,14 @@ function showResult() {
         result = "Computer wins!"
         compScore++;
     }
+    if (playerChoice == "Paper" && computerChoice == "Lizard") {
+        result = "Computer wins!"
+        compScore++;
+    }
+    if (playerChoice == "Paper" && computerChoice == "Spock") {
+        result = "Player wins!"
+        playerScore++;
+    }
     if (playerChoice == "Scissors" && computerChoice == "Rock") {
         result = "Computer wins!"
         compScore++;
@@ -74,17 +88,54 @@ function showResult() {
         result = "Player wins!"
         playerScore++;
     }
+    if (playerChoice == "Scissors" && computerChoice == "Lizard") {
+        result = "Player wins!"
+        playerScore++;
+    }
+    if (playerChoice == "Scissors" && computerChoice == "Spock") {
+        result = "Computer wins!"
+        compScore++;
+    }
+    if (playerChoice == "Lizard" && computerChoice == "Rock") {
+        result = "Computer wins!"
+        compScore++;
+    }
+    if (playerChoice == "Lizard" && computerChoice == "Paper") {
+        result = "Player wins!"
+        playerScore++;
+    }
+    if (playerChoice == "Lizard" && computerChoice == "Scissors") {
+        result = "Computer wins!"
+        compScore++;
+    }
+    if (playerChoice == "Lizard" && computerChoice == "Spock") {
+        result = "Player wins!"
+        playerScore++;
+    }
+    if (playerChoice == "Spock" && computerChoice == "Rock") {
+        result = "Player wins!"
+        playerScore++;
+    }
+    if (playerChoice == "Spock" && computerChoice == "Paper") {
+        result = "Computer wins!"
+        compScore++;
+    }
+    if (playerChoice == "Spock" && computerChoice == "Scissors") {
+        result = "Player wins!"
+        playerScore++;
+    }
+    if (playerChoice == "Spock" && computerChoice == "Lizard") {
+        result = "Computer wins!"
+        compScore++;
+    }
     if (result != "Draw!"){
         rounds++;
     }
-
-    if (playerScore == 3 || compScore == 3) {
+    if (playerScore == 5 || compScore == 5) {
         rounds = 0;
         playerScore = 0;
         compScore = 0;
     }
-
-
 
     resultDisplay.innerHTML = result
     playerScoreDisplay.innerHTML = playerScore
