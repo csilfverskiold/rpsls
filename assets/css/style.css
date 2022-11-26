@@ -31,3 +31,33 @@ i {
 .score-area {
     padding-top: 30px;
 }
+
+footer {
+    position: absolute;
+    width: 100%;
+}
+
+@media screen and (min-width: 740px) {
+    
+    .result-area {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .button-area {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .score-area {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .rules {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    
+}
