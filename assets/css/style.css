@@ -13,13 +13,21 @@ h1 {
     height: 60px;
 }
 
+.button-area {
+    width: fit-content;
+    margin: 0 auto;
+}
 
 button {
     border: none;
     background: none;
-    padding: 0;
 }
 
 i {
-    font-size: 45px;
+    font-size: 12vw;
+
+}
+
+.score-area {
+    padding-top: 30px;
 }

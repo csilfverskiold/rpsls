@@ -15,7 +15,9 @@ let playerScore = 0;
 let compScore = 0;
 let rounds = 0;
 
-
+/**
+ * Event listener to fire when player clicks button choice
+ */
 for (let button of buttonChoices) {
     button.addEventListener("click", function() {
         playerChoice = this.getAttribute("data-choice");
