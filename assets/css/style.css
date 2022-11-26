@@ -13,7 +13,13 @@ h1 {
     height: 60px;
 }
 
+
 button {
     border: none;
-    
+    background: none;
+    padding: 0;
+}
+
+i {
+    font-size: 45px;
 }
