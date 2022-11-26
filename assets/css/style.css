@@ -18,6 +18,7 @@ h1 {
     margin: 0 auto;
 }
 
+/* The content of http://bit.ly/3GOl9Jp proved helpful when understading how to remove original properties of the buttons*/
 button {
     border: none;
     background: none;

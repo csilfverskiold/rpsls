@@ -1,3 +1,9 @@
+/*The main structure of the JavaScript code was 
+inspired by two different sources, a tutorial video (http://bit.ly/3ii2aNq) and 
+the CI Project Portfolio 2 Scope video (http://bit.ly/3u0qKow). 
+The content of both sources acted as inspiration and were
+altered for use in my custom project.*/
+
 /**
  * Declare variables for DOM elements
  */
