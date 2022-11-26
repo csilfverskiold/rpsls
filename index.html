@@ -20,19 +20,19 @@
 
     <section>
         <div class="button-area">
-            <button id="rock" data-choice="Rock">
+            <button aria-label="Rock" data-choice="Rock">
                 <i class="fa-regular fa-hand-back-fist"></i>
             </button>
-            <button id="paper" data-choice="Paper">
+            <button aria-label="Paper" data-choice="Paper">
                 <i class="fa-regular fa-hand"></i>
             </button>
-            <button id="scissors" data-choice="Scissors">
+            <button aria-label="Scissors" data-choice="Scissors">
                 <i class="fa-regular fa-hand-scissors"></i>
             </button>
-            <button id="lizard" data-choice="Lizard">
+            <button aria-label="Lizard" data-choice="Lizard">
                 <i class="fa-regular fa-hand-lizard"></i>
             </button>
-            <button id="spock" data-choice="Spock">
+            <button aria-label="Spock" data-choice="Spock">
                 <i class="fa-regular fa-hand-spock"></i>
             </button>
         </div>
@@ -46,6 +46,20 @@
             <h3 class="rounds">Rounds: <span id="rounds-played">0</span></h3>
         </div>
     </section>
+
+    <footer>
+        <h4>Rules: </h4>
+        <p>Best of 5 rounds.</p>
+        <p>Rock beats Scissors and Lizard,
+            <br>
+            Paper beats Rock and Spock,
+            <br>
+            Scissors beat Paper and Lizard,
+            <br>
+            Lizard beats Spock and Paper,
+            <br>
+            Spock beats Rock and Scissors.</p>
+    </footer>
 
 
     <script src="assets/js/script.js"></script>
