@@ -1,108 +1,99 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Rock, Paper, Scissors, Lizard, Spock Game
 
-Welcome csilfverskiold,
+Rock, Paper, Scissors, Lizard, Spock, a game of chance, will help you settle any decision, dispute or matter you have. This game is an extended version of the original game (Rock, Paper, Scissors) and adds even more excitement with the additional possible choices of Lizard and Spock! 
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+The target audience, players of all ages, are provided with the full rules of Rock, Paper, Scissors, Lizard, Spock. And while the aim of the game is to have fun and beat the computers score, the player can apply the outcome of the game on personal matters, such as deciding on what to eat for dinner or what shirt to wear to that party on Friday. 
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+<img src="assets/images/amiresponsive_white.png" alt="Image showing the sites multi-platform responsive design">
 
-## Gitpod Reminders
+<br>
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Features
 
-`python3 -m http.server`
+<br>
 
-A blue button should appear to click: _Make Public_,
+### Existing features 
 
-Another blue button should appear to click: _Open Browser_.
+- Header
+    - At the top of the page, the header displays the game name: Rock, Paper, Scissors, Lizard, Spock in a tasteful font that provides full contrast with the background. 
+    - The header clearly displays the name of the game for the player. 
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+<br>
 
-A blue button should appear to click: _Make Public_,
+<img src="assets/images/game_header.png" alt="Game name">
 
-Another blue button should appear to click: _Open Browser_.
+<br>
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+- The Game Area 
+    - The game area includes a choice of five options to choose from to play: Rock, Paper, Scissors, Lizard or Spock. The options are interactive buttons displayed as icons representing the five classic handshaped options. 
+    - The player clicks the interactive button of their choosing to play the game. 
 
-To log into the Heroku toolbelt CLI:
+<br>
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+<img src="assets/images/game_area.png" alt="Playable options and game results">
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+<br>
 
-------
+- The Game Results
+    - When the player clicks an option, the JavaScript code randomly generates a choice for the Computer. 
+    - Both the Player and Computer choices, along with the resulting winner, is displayed in the top left corner of the game area. 
+    - The player can follow their own and the Computers score, along with how many rounds have been played, with the score tracker in the bottom left corner. 
+    - The game results are easy to follow as they are displayed in a clear way for the player. 
 
-## Release History
+<br>
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+- Footer
+    - The footer section contains the rules of the game, specifically what option beats what and that the game is reset to 0 once either Player or Computer have won 5 rounds. 
+    - The footer section is important as it informs the player the game mechanics. 
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+<br>
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+<img src="assets/images/game_rules.png" alt="Playable options and game results">
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+<br>
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+### Features Left to Implement
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+- Add an alert telling the player who won five rounds first. 
+- Add a function to reset the Player choice, Computer choice and Results display when five rounds have been played. 
+- Add button name displayed on each button: Rock, Paper, Scissors, Lizard, Spock. 
+- Add style to interactive button when clicked, providing a clearer connection to the players choice.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+<br>
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+## Testing
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+- I have playtested the game in browsers: Chrome, Firefox, Edge. 
+- I confirmed the game results are always correct. 
+- I confirmed the header, footer, results and score tracker are easy to read and understand. 
+- I confirmed the site is responsive and functions as intended on all standard screen sizes using the devtools device toolbar. 
+- I confirmed the site is accessible and easy to read by running it through devtools lighthouse. 
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+<br>
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+<img src="assets/images/lighthouse_m.png" alt="Lighthouse score">
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+<br>
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+## Validator Testing
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+- HTML
+    - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/)
+- CSS 
+    - No errors were returned when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/)
+- JavaScript 
+    - No errors were returned when passing through the official [Jshint validator](https://jshint.com/)
+        - The following metrics were returned: 
+        - There are 3 functions in this file.
+        - Function with the largest signature take 0 arguments, while the median is 0.
+        - Largest function has 72 statements in it, while the median is 4. 
+        - The most complex function has a cyclomatic complexity value of 45 while the median is 1.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
 
-------
+## Deployment 
+- The site was deployed to GitHub pages. The steps to deploy are as follows:
+    - In the GitHub repository, navigate to the Settings tab
+    - From the source section drop-down menu, select the Main Branch
+    - Once the main branch has been selected, the page will provide the link to the completed website. 
 
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+The live link can be found here: [Rock, Paper, Scissors, Lizard, Spock Game](https://csilfverskiold.github.io/rpsls/)
